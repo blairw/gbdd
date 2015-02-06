@@ -3,7 +3,7 @@
 	$grouping = (isset($_GET["grouping"]) ? $_GET["grouping"] : null);
 	
 	// database read
-	include("dbconfig.php");
+	include("../gbdd_dbconfig/dbconfig.php");
 	$mysqli = new mysqli($MYSQL_DBSERVER, $MYSQL_USERNAME, $MYSQL_PASSWORD, $MYSQL_DATABASE);
 	if ($mysqli->connect_errno) {
 		echo "Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
