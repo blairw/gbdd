@@ -6,7 +6,10 @@ function bodyDidLoad() {
 function loadAllItems() {
 	var allItemsString = $.get("svc-getItems.php", function(data) {
 		allItems = data;
-		$("#statusbar").html("Loaded " + data.length + " items. <a href='svc-getItems.php' target='_blank'>See API?</a>");
+		$("#statusbar").html(
+			"Loaded " + data.length + " items. "
+			+ "<a href='svc-getItems.php' target='_blank'>See API?</a>"
+		);
 		$("#statusbar").css("background-color", "green");
 		console.log(allItems);
 	});
