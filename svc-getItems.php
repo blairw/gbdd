@@ -13,9 +13,9 @@
 			t.type_id AS type_id,
 			t.type_name AS type_name
 		from
-			blairwan_blairdb.gbdd_items i
-			left join blairwan_blairdb.gbdd_item_type it ON it.item_id = i.item_id
-			left join blairwan_blairdb.gbdd_types t ON t.type_id = it.type_id
+			gbdd_items i
+			left join gbdd_item_type it ON it.item_id = i.item_id
+			left join gbdd_types t ON t.type_id = it.type_id
 		ORDER BY item_id ASC
 	");
 	$counter = 0;

@@ -17,9 +17,9 @@
 			p.type_id AS parent_id,
 			p.type_name AS parent_name
 		from
-			blairwan_blairdb.gbdd_types c
-			left join blairwan_blairdb.gbdd_type_relo r ON c.type_id = r.type_id_child
-			left join blairwan_blairdb.gbdd_types p ON p.type_id = r.type_id_parent
+			gbdd_types c
+			left join gbdd_type_relo r ON c.type_id = r.type_id_child
+			left join gbdd_types p ON p.type_id = r.type_id_parent
 		");
 		$validApiUsage = true;
 	}
