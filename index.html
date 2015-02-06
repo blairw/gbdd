@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>gbdd</title>
+		<link rel="icon" type="image/png" href="frameworks/system-search.png?v=2" />
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script src="frameworks/jquery-1.11.2.min.js"></script>
+		<script src="frameworks/jquery.highlight.js"></script>
+		<script src="frameworks/bootstrap-3.3.2-dist/js/bootstrap.min.js"></script>
+		<script src="datalogic.js"></script>
+		<link rel="stylesheet" href="frameworks/bootstrap-3.3.2-dist/css/bootstrap.min.css">
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body onload="bodyDidLoad()">
+		<h1>gbdd</h1>
+		<div id="subtitle"><a href="http://www.gerald.id.au/">Gerald</a> and <a href="http://www.blairwang.id.au/">Blair</a>'s Differential Diagnosis thing</div>
+		<div id="statusbar">Loading data...</div>
+		<input id="enterText" class="form-control" onkeyup="processText()" placeholder="Search" />
+		<output id="myOutput"></output>
+	</body>
+</html>
