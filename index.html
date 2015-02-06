@@ -15,7 +15,15 @@
 	</head>
 	<body onload="bodyDidLoad()">
 		<h1>gbdd</h1>
-		<div id="subtitle"><a href="http://www.gerald.id.au/">Gerald</a> and <a href="http://www.blairwang.id.au/">Blair</a>'s Differential Diagnosis thing</div>
+		<div id="subtitle">
+			<strong><a href="http://www.gerald.id.au/">Gerald</a> and <a href="http://www.blairwang.id.au/">Blair</a>'s Differential Diagnosis thing</strong>
+			<div class="makeItGrey">
+				bootstrap
+				&bull; jquery
+				&bull; jquery-highlight
+				&bull; source code on <a href="https://github.com/blairw/gbdd">GitHub</a>
+			</div>
+		</div>
 		<div id="statusbar">Loading data...</div>
 		<input id="enterText" class="form-control" onkeyup="processText()" placeholder="Search" />
 		<output id="myOutput"></output>
