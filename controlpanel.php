@@ -9,11 +9,12 @@
 		<script src="frameworks/bootstrap-3.3.2-dist/js/bootstrap.min.js"></script>
 		<script src="controlpanel.logic.js"></script>
 		<link rel="stylesheet" href="frameworks/bootstrap-3.3.2-dist/css/bootstrap.min.css">
+		<link rel="stylesheet" href="frameworks/font-awesome-4.3.0/css/font-awesome.min.css">
 		<link rel="stylesheet" href="style.css">
 	</head>
 	<body class="wide" onload="bodyDidLoad()">
 		<h1>gbdd Control Panel</h1>
-		<div id="statusbar">Loading data...</div>
+		<div id="statusbar"><span class='fa fa-cog fa-spin'></span>&nbsp;&nbsp;Loading data...</div>
 		<h2>Items</h2>
 		<table id="itemsTable" class="table table-striped table-bordered">
 			<tbody id="itemsTbody">
