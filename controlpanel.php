@@ -14,7 +14,7 @@
 	</head>
 	<body class="wide" onload="bodyDidLoad()">
 		<h1>gbdd Control Panel</h1>
-		<div id="statusbar"><span class='fa fa-cog fa-spin'></span>&nbsp;&nbsp;Loading data...</div>
+		<div id="statusbar"><span class='fa fa-refresh fa-spin'></span>&nbsp;&nbsp;Loading data...</div>
 		<h2>Items</h2>
 		<table id="itemsTable" class="table table-striped table-bordered">
 			<tbody id="itemsTbody">
