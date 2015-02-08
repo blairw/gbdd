@@ -29,13 +29,11 @@
 					<div class="modal-body">
 						<p>
 						<label>Item Name</label>
-						<input type="text" class="form-control" placeholder="Item name" />
+						<input id="inputItemName" type="text" class="form-control" placeholder="Item name" />
 						</p>
 						<p>
 						<label>Onset</label>
-						<select class="form-control">
-							<option>Chronic</option>
-						</select>
+						<input id="inputItemOnset" type="text" class="form-control" placeholder="Item onset" />
 						</p>
 						<p>
 						<label>Associated Types</label>
@@ -45,8 +43,8 @@
 						</p>
 					</div>
 					<div class="modal-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-						<button type="button" class="btn btn-primary">Save changes</button>
+						<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+						<button type="button" class="btn btn-primary" disabled>Save changes</button>
 					</div>
 				</div><!-- /.modal-content -->
 			</div><!-- /.modal-dialog -->

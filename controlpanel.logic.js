@@ -4,6 +4,18 @@ var allTypes = [];
 function bodyDidLoad() {
 	loadAllItems();
 }
+
+function getItemById(givenId) {
+	returnObject = null;
+	for (var i = 0; i < allItems.length; i++) {
+		if (allItems[i].item_id == givenId) {
+			returnObject = allItems[i];
+		}
+	}
+	
+	return returnObject;
+}
+
 function loadAllItems() {
 	// select2
 	$("#selectAssociatedTypes").select2({
@@ -40,7 +52,8 @@ function loadAllItems() {
 			$("#itemsTbody").append(
 				"<tr><td>" + allItems[i].item_id
 				+ "</td><td>" + allItems[i].item_name
-				+ "</td><td>" + "<button class='100percented btn btn-sm btn-primary' onclick='editModalShow()'>EDIT</button>"
+				+ "</td><td>"
+				+ "<button class='100percented btn btn-sm btn-primary' onclick='editModalShow(" + allItems[i].item_id + ")'>EDIT</button>"
 				+ "</td></tr>"
 			);
 		}
@@ -48,12 +61,23 @@ function loadAllItems() {
 		$("#itemsTbody").append(
 			"<tr><td>" + "<em>New line:</em>"
 			+ "</td><td>" + "<input type='text' class='form-control' placeholder='New item name' />"
-			+ "</td><td>" + "<button class='100percented btn btn-sm btn-success'><span class='fa fa-upload'></span>&nbsp;&nbsp;SAVE</button>"
+			+ "</td><td>"
+			+ "<button class='100percented btn btn-sm btn-success' disabled>"
+			+ "<span class='fa fa-upload'></span>&nbsp;&nbsp;SAVE</button>"
 			+ "</td></tr>"
 		);
 		
 	}); // that's all that will get executed upon load of data!
 }
-function editModalShow() {
+function editModalShow(item_id) {
 	$("#editModal").modal("show");
+	$("#inputItemName").val(getItemById(item_id).item_name);
+	$("#inputItemOnset").val(getItemById(item_id).item_onset);
+	if (getItemById(item_id).types.length > 0) {
+		var tempTypesArray = [];
+		for (var i = 0; i < getItemById(item_id).types.length; i++) {
+			tempTypesArray.push(getItemById(item_id).types[i].type_id);
+		}
+		$("#selectAssociatedTypes").select2("val", tempTypesArray);
+	}
 }
