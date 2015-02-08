@@ -41,9 +41,12 @@ function processText() {
 				}
 				areItemsFound = true;
 				$("#myOutput").append(
-					"<div class='itemCard'>"
+					"<div class='panel panel-default'>"
+					+ "<div class='panel-body itemCard'>"
 					+ "<h2 class='itemTitle'>" + allItems[i].item_name + "</h2>"
 					+ (thisItemTypes.length > 0 ? "Types: <span class='itemTypes'>" + thisItemTypes.join(", ") : "") + "</span>"
+				    + (allItems[i].item_onset ? "<div>Onset: " + allItems[i].item_onset + "</div>" : "")
+					+ "</div>"
 					+ "</div>"
 				);
 			}

@@ -24,7 +24,7 @@ function loadAllItems() {
 				"<tr><td>" + allItems[i].item_id
 				+ "</td><td>" + allItems[i].item_name
 				+ "</td><td>" + thisItemTypeNames.join(", ")
-				+ "</td><td>" + "<button class='100percented btn btn-sm btn-primary' disabled>EDIT</button>"
+				+ "</td><td>" + "<button class='100percented btn btn-sm btn-primary' onclick='editModalShow()'>EDIT</button>"
 				+ "</td></tr>"
 			);
 		}
@@ -38,4 +38,7 @@ function loadAllItems() {
 		);
 		
 	}); // that's all that will get executed upon load of data!
+}
+function editModalShow() {
+	$("#editModal").modal("show");
 }

@@ -13,6 +13,33 @@
 		<link rel="stylesheet" href="style.css">
 	</head>
 	<body class="wide" onload="bodyDidLoad()">
+		<div class="modal" id="editModal">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-body">
+						<p>
+						<label>Item Name</label>
+						<input type="text" class="form-control" placeholder="Item name" />
+						</p>
+						<p>
+						<label>Onset</label>
+						<select class="form-control">
+							<option>Chronic</option>
+						</select>
+						</p>
+						<p>
+						<label>Associated Types</label>
+						<input type="text" class="form-control" placeholder="Associated types" />
+						</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						<button type="button" class="btn btn-primary">Save changes</button>
+					</div>
+				</div><!-- /.modal-content -->
+			</div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
+		
 		<h1>gbdd Control Panel</h1>
 		<div id="statusbar"><span class='fa fa-refresh fa-spin'></span>&nbsp;&nbsp;Loading data...</div>
 		<h2>Items</h2>
