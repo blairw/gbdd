@@ -14,20 +14,22 @@
 		<link rel="stylesheet" href="style.css">
 		<link rel="icon" type="image/png" href="frameworks/system-search.png?v=2" />
 	</head>
-	<body class="narrow" onload="bodyDidLoad()">
-		<h1>gbdd</h1>
-		<div id="subtitle">
-			<strong>
-				<a href="http://www.gerald.id.au/" target="_blank">Gerald</a>
-				and <a href="http://www.blairwang.id.au/" target="_blank">Blair</a>'s Differential Diagnosis thing
-			</strong>
-			<div class="makeItGrey">
-				source code on <a href="https://github.com/blairw/gbdd" target="_blank">GitHub</a>
-				&bull;&nbsp;change settings at <a href="controlpanel.php" target="_blank">controlpanel.php</a>
+	<body onload="bodyDidLoad()">
+		<div class="gbddWrapper narrow">
+			<h1>gbdd</h1>
+			<div id="subtitle">
+				<strong>
+					<a href="http://www.gerald.id.au/" target="_blank">Gerald</a>
+					and <a href="http://www.blairwang.id.au/" target="_blank">Blair</a>'s Differential Diagnosis thing
+				</strong>
+				<div class="makeItGrey">
+					source code on <a href="https://github.com/blairw/gbdd" target="_blank">GitHub</a>
+					&bull;&nbsp;change settings at <a href="controlpanel.php" target="_blank">controlpanel.php</a>
+				</div>
 			</div>
+			<div id="statusbar"><span class='fa fa-refresh fa-spin'></span>&nbsp;&nbsp;Loading data...</div>
+			<input id="enterText" class="form-control" onkeyup="processText()" placeholder="Search" />
+			<output id="myOutput"></output>
 		</div>
-		<div id="statusbar"><span class='fa fa-refresh fa-spin'></span>&nbsp;&nbsp;Loading data...</div>
-		<input id="enterText" class="form-control" onkeyup="processText()" placeholder="Search" />
-		<output id="myOutput"></output>
 	</body>
 </html>

@@ -11,13 +11,13 @@ h1 {
 #statusbar a, #statusbar a:hover, #statusbar a:visited {
 	color: rgba(255,255,255,0.5);
 }
-body.narrow {
+.gbddWrapper.narrow {
 	max-width: 600px;
 }
-body.wide {
+.gbddWrapper.wide {
 	max-width: 900px;
 }
-body {
+.gbddWrapper {
 	font-family: 'Arial', sans-serif;
 	margin: 0 auto;
 	padding: 5pt;
