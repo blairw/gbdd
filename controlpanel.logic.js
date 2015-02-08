@@ -25,6 +25,10 @@ function loadAllItems() {
 	var allTypesString = $.get("svc-getTypes.php?grouping=child", function(data) {
 		allTypes = _.sortBy(data, function(datum){ return datum.child_name; });
 		
+		$("#statusbar").html(
+			"<span class='fa fa-refresh fa-spin'></span>&nbsp;&nbsp;Loading items ..."
+		);
+		
 		for (var i = 0; i < allTypes.length; i++) {
 			$("#selectAssociatedTypes").append(
 				"<option value='" + allTypes[i].child_id + "'>" + allTypes[i].child_name + "</option>"
