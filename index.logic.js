@@ -7,11 +7,10 @@ function loadAllItems() {
 	var allItemsString = $.get("svc-getItems.php", function(data) {
 		allItems = data;
 		$("#statusbar").html(
-			"Loaded " + data.length + " items. "
+			"<span class='fa fa-check-circle'></span>&nbsp;&nbsp;Loaded " + data.length + " items. "
 			+ "<a href='svc-getItems.php' target='_blank'>See API?</a>"
 		);
 		$("#statusbar").css("background-color", "green");
-		console.log(allItems);
 	});
 }
 
@@ -25,9 +24,17 @@ function processText() {
 			var thisItemMatches = false;
 			var thisItemTypes = [];
 			
+			// search logic
 			if (allItems[i].item_name.toLowerCase().search(textInput) != -1) {
+				// checking item name
 				thisItemMatches = true;
+				
+			} else if (allItems[i].item_onset != null && allItems[i].item_onset.toLowerCase().search(textInput) != -1) {
+				// checking item onset
+				thisItemMatches = true;
+				
 			} else if (allItems[i].types.length > 0) {
+				// checking each item type
 				for (var j = 0; j < allItems[i].types.length; j++) {
 					if (allItems[i].types[j].type_name.toLowerCase().search(textInput) != -1) {
 						thisItemMatches = true;
@@ -45,7 +52,7 @@ function processText() {
 					+ "<div class='panel-body itemCard'>"
 					+ "<h2 class='itemTitle'>" + allItems[i].item_name + "</h2>"
 					+ (thisItemTypes.length > 0 ? "Types: <span class='itemTypes'>" + thisItemTypes.join(", ") : "") + "</span>"
-				    + (allItems[i].item_onset ? "<div>Onset: " + allItems[i].item_onset + "</div>" : "")
+				    + (allItems[i].item_onset ? "<div>Onset: <span class='itemOnset'>" + allItems[i].item_onset + "</span></div>" : "")
 					+ "</div>"
 					+ "</div>"
 				);
@@ -56,6 +63,8 @@ function processText() {
 		}
 	}
 	
+	// highlight search term in searched areas of each item
 	$(".itemTitle").highlight(textInput);
 	$(".itemTypes").highlight(textInput);
+	$(".itemOnset").highlight(textInput);
 }
