@@ -54,9 +54,9 @@ function loadAllItems() {
 					}
 				}
 				$("#itemsTbody").append(
-					"<tr><td>" + allItems[i].item_id
-					+ "</td><td>" + allItems[i].item_name
-					+ "</td><td>"
+					"<tr><td class='controlpanelTableCell'>" + allItems[i].item_id
+					+ "</td><td class='controlpanelTableCell'>" + allItems[i].item_name
+					+ "</td><td class='controlpanelTableCell'>"
 					+ "<button class='100percented btn btn-sm btn-primary' onclick='editModalShow(" + allItems[i].item_id + ")'>EDIT</button>"
 					+ "</td></tr>"
 				);
@@ -64,8 +64,8 @@ function loadAllItems() {
 			// insert new item line (row)
 			$("#itemsTbody").append(
 				"<tr><td>" + "<em>New line:</em>"
-				+ "</td><td>" + "<input type='text' class='form-control' placeholder='New item name' />"
-				+ "</td><td>"
+				+ "</td><td class='controlpanelTableCell'>" + "<input type='text' class='form-control' placeholder='New item name' />"
+				+ "</td><td class='controlpanelTableCell'>"
 				+ "<button class='100percented btn btn-sm btn-success' disabled>"
 				+ "<span class='fa fa-upload'></span>&nbsp;&nbsp;SAVE</button>"
 				+ "</td></tr>"
